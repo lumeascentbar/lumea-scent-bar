@@ -336,6 +336,117 @@
     flex-shrink:0;
   }
 
+  /* ---------- EXPERIENCES ---------- */
+  .experiences{background:var(--ivory-soft);}
+  .experiences-intro{
+    max-width:640px;
+    margin:0 auto 70px;
+    text-align:center;
+  }
+  .experiences-intro p{
+    font-size:0.98rem;
+    line-height:1.85;
+    color:#4a3c2c;
+  }
+  .experiences-intro p + p{margin-top:16px;}
+  .exp-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--hairline);
+    max-width:1000px;
+    margin:0 auto;
+    border:1px solid var(--hairline);
+  }
+  .exp-card{
+    background:var(--ivory);
+    padding:48px 42px;
+  }
+  .exp-card .exp-eyebrow{
+    font-size:0.68rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--brass);
+  }
+  .exp-card h3{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:1.6rem;
+    margin:10px 0 4px;
+  }
+  .exp-card .exp-format{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:1rem;
+    color:var(--brass);
+    margin-bottom:18px;
+    display:block;
+  }
+  .exp-card p{
+    font-size:0.92rem;
+    line-height:1.75;
+    color:#4a3c2c;
+  }
+  .exp-note{
+    max-width:680px;
+    margin:56px auto 0;
+    text-align:center;
+    padding:32px 34px;
+    border:1px solid var(--hairline);
+  }
+  .exp-note span{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:var(--brass);
+    font-size:1.05rem;
+    display:block;
+    margin-bottom:10px;
+  }
+  .exp-note p{
+    font-size:0.92rem;
+    line-height:1.75;
+    color:#4a3c2c;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--ivory);}
+  .faq-list{
+    max-width:780px;
+    margin:0 auto;
+  }
+  .faq-item{
+    border-top:1px solid var(--hairline);
+  }
+  .faq-list .faq-item:last-child{border-bottom:1px solid var(--hairline);}
+  .faq-item summary{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:26px 4px;
+    cursor:pointer;
+    list-style:none;
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.25rem;
+    color:var(--bronze-text);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .plus{
+    font-family:'Jost',sans-serif;
+    font-size:1.3rem;
+    color:var(--brass);
+    flex-shrink:0;
+    transition:transform 0.3s ease;
+  }
+  .faq-item[open] summary .plus{transform:rotate(45deg);}
+  .faq-item .faq-answer{
+    padding:0 4px 28px;
+    font-size:0.95rem;
+    line-height:1.8;
+    color:#4a3c2c;
+    max-width:640px;
+  }
+
   /* ---------- BANNER ---------- */
   .spotlight{
     padding:100px 6vw;
@@ -545,6 +656,8 @@
     .closing-grid{grid-template-columns:1fr; gap:34px; text-align:center;}
     .banner{height:42vh;}
     .occ-grid{grid-template-columns:repeat(2, 1fr);}
+    .exp-grid{grid-template-columns:1fr;}
+    .exp-card{padding:36px 26px;}
     .includes-list{grid-template-columns:1fr;}
     .includes-list li:nth-child(odd){border-right:none;}
     .includes-list li:nth-last-child(-n+2){border-bottom:none;}
@@ -561,8 +674,9 @@
   </button>
   <ul id="navMenu">
     <li><a href="#servicio">Servicio</a></li>
-    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#experiencias">Experiencias</a></li>
     <li><a href="#ocasiones">Ocasiones</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
 </nav>
@@ -617,6 +731,68 @@
     <li><span class="mark">✦</span>Montaje y desmontaje del Scent Bar.</li>
     <li><span class="mark">✦</span>Frascos y empaques personalizados para que cada invitado se lleve su creación.</li>
   </ul>
+</section>
+
+<section class="experiences" id="experiencias">
+  <div class="section-head">
+    <span class="eyebrow">Choose Your Experience</span>
+    <h2>Elige tu experiencia</h2>
+  </div>
+  <div class="experiences-intro">
+    <p>Cada celebración es única, y también lo es la experiencia que la acompaña.</p>
+    <p>Al momento de la reserva, los anfitriones eligen una de nuestras cuatro
+    experiencias exclusivas. Esa elección define el producto que recibirán
+    todos los invitados y garantiza una experiencia sensorial coherente
+    durante toda la celebración.</p>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card">
+      <span class="exp-eyebrow">Experiencia I</span>
+      <h3>Atelier Personal</h3>
+      <span class="exp-format">Extrait de Parfum · 15 ml o 30 ml</span>
+      <p>Nuestros invitados descubren una colección curada de seis fragancias
+      inspiradas en las composiciones más icónicas de la alta perfumería
+      internacional y eligen la que mejor los representa. Cada fragancia se
+      entrega como un Extrait de Parfum, presentado en un elegante frasco de
+      15 ml o 30 ml.</p>
+    </div>
+    <div class="exp-card">
+      <span class="exp-eyebrow">Experiencia II</span>
+      <h3>Atelier Home</h3>
+      <span class="exp-format">Reed Diffuser · 100 ml</span>
+      <p>La experiencia Atelier reinterpretada para el hogar. Los invitados
+      eligen entre una colección curada de seis fragancias y reciben un
+      elegante difusor de aromas con varillas de bambú de 100 ml, diseñado
+      para llenar sus espacios con el recuerdo de la celebración.</p>
+    </div>
+    <div class="exp-card">
+      <span class="exp-eyebrow">Experiencia III</span>
+      <h3>Signature Personal</h3>
+      <span class="exp-format">Extrait de Parfum · 15 ml o 30 ml</span>
+      <p>Antes del evento, Lumea crea una Signature Scent exclusiva inspirada
+      en la historia de los anfitriones y en el ADN olfativo de la
+      celebración. Cada invitado recibe esa fragancia en un frasco de
+      Extrait de Parfum, convirtiéndose en un recuerdo verdaderamente
+      irrepetible.</p>
+    </div>
+    <div class="exp-card">
+      <span class="exp-eyebrow">Experiencia IV</span>
+      <h3>Signature Home</h3>
+      <span class="exp-format">Reed Diffuser · 100 ml</span>
+      <p>La Signature Scent del evento se presenta como un refinado difusor
+      de aromas para el hogar con varillas de bambú. Cada invitado lleva
+      consigo la identidad olfativa de la celebración para seguir
+      reviviéndola en su hogar mucho después de que el evento haya
+      terminado.</p>
+    </div>
+  </div>
+  <div class="exp-note">
+    <span>Nota importante</span>
+    <p>Cada celebración incluye una única experiencia seleccionada previamente
+    por los anfitriones. Esta elección garantiza que todos los invitados
+    compartan la misma propuesta sensorial y que la identidad olfativa del
+    evento se mantenga coherente en cada detalle.</p>
+  </div>
 </section>
 
 <div class="spotlight dark">
@@ -693,6 +869,56 @@
     <div class="occ-card"><span class="eyebrow">✦</span><h3>Ferias y activaciones</h3></div>
     <div class="occ-card"><span class="eyebrow">✦</span><h3>Fiestas privadas</h3></div>
     <div class="occ-card"><span class="eyebrow">✦</span><h3>Celebraciones especiales</h3></div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="section-head">
+    <span class="eyebrow">Resolvemos tus dudas</span>
+    <h2>Preguntas Frecuentes</h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>¿Qué es Lumea Scent Bar?<span class="plus">+</span></summary>
+      <div class="faq-answer">
+        <p>Es una experiencia de perfumería en vivo donde cada invitado
+        descubre, elige y personaliza una fragancia para llevarla consigo
+        como recuerdo de la celebración. Más que un detalle, es una
+        experiencia sensorial que permanece mucho después de que el evento
+        termina.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Para qué tipo de eventos está disponible?<span class="plus">+</span></summary>
+      <div class="faq-answer">
+        <p>Creamos experiencias para bodas, aniversarios, bridal showers,
+        cumpleaños, eventos corporativos, lanzamientos de marca y
+        celebraciones privadas.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Se puede personalizar?<span class="plus">+</span></summary>
+      <div class="faq-answer">
+        <p>Sí. Personalizamos etiquetas, nombres, colores, cintas y otros
+        detalles para que cada perfume refleje la identidad de tu
+        celebración.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Viajan a otras ciudades?<span class="plus">+</span></summary>
+      <div class="faq-answer">
+        <p>Sí. Llevamos la experiencia Lumea Scent Bar a diferentes ciudades,
+        sujeto a disponibilidad y reserva anticipada.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cuántos invitados pueden participar?<span class="plus">+</span></summary>
+      <div class="faq-answer">
+        <p>Diseñamos experiencias tanto para celebraciones íntimas como para
+        eventos de gran formato. Adaptamos cada propuesta al número de
+        invitados y a las características de tu evento.</p>
+      </div>
+    </details>
   </div>
 </section>
 
